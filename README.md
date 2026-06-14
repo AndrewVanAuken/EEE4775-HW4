@@ -21,7 +21,7 @@
 
 **RMS Sufficient Bound:** 4(2^1/4 - 1) = 0.7568
 
-**Feasibility Conclusion:**   Since U = 0.80 > 0.7798, the bound is inconclusive for RMS. However, since U is less than or equal to 1, it is guaranteed to be EDF-feasible.
+**Feasibility Conclusion:**   Since U = 0.80 > 0.7568, the bound is inconclusive for RMS. However, since U is less than or equal to 1, it is guaranteed to be EDF-feasible.
 
 ---
 
@@ -45,7 +45,7 @@
 - (R3)^1 = 20 + (20/10) * 2  + (20/25) * 5 = 29ms
 - (R3)^2 = 20 + (29/10) * 2 + (29/25) * 5 = 36ms
 - (R3)^3 = 20 + (36/10) * 2 + (36/25) * 5 = 38ms
-- (R3)^4 = 20 + (38/10) * 2 + (38/25) * 5 = 36ms
+- (R3)^4 = 20 + (38/10) * 2 + (38/25) * 5 = 38ms
 
 **Status:** Feasible
 
@@ -53,6 +53,7 @@
 
 ## Part C – A failure scenario
 C4 scales from 10ms to 25ms
+
 U = 1/5 + 2/10 + 4/20 + 25/50 = 1.1
 
 The set is not RMS-feasible by the bound. Because U > 1.0, the processor is over-utilized, and RTA will confirm this failure by showing that τ₄ diverges past D4 = 50ms.
@@ -81,4 +82,4 @@ In safety-critical avionics, scheduling analysis provides mandatory compliance e
 
 https://www.rapitasystems.com/blog/do-178b-do-178c-and-worst-case-execution-time
 
-Google AI was used as well
+- Google AI was used as well
