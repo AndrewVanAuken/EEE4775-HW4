@@ -7,7 +7,7 @@
 
 **RMS Sufficient Bound:** 3(2^1/3 - 1) = 0.7798
 
-**Feasibility Conclusion:**  Since U = 0.6000 less than or equal to 0.7798, the task set is guaranteed to be RMS-feasible and EDF-feasible.
+**Feasibility Conclusion:**  Since U = 0.60 less than or equal to 0.7798, the task set is guaranteed to be RMS-feasible and EDF-feasible.
 
 ### Set 2: τ₁ (T=4, C=1) · τ₂ (T=6, C=2) · τ₃ (T=10, C=3)
 **Total Utilization (U):** 1/4 + 2/6 + 3/10 = 0.8833
@@ -76,10 +76,12 @@ Because RMS utilizes fixed priorities based entirely on task periods, changes in
 ---
 
 ## Part D – Industry anchor
-In safety-critical avionics, scheduling analysis provides mandatory compliance evidence. A DO-178C team uses tools like RapiTime to measure worst-case execution times (WCETs) and verify deadline adherence. Engineers archive task periods, priorities, measured WCETs, utilization, and RTA results into the project’s formal verification records. During audits, priorities are reviewed to guarantee safety-critical functions receive correct scheduling precedence. If RTA indicates a deadline violation, the failure blocks certification. Engineers resolve misses by optimizing code to reduce execution time, lengthening task periods, or splitting large operations into smaller tasks. The timing analysis is then re-run to provide objective evidence that the real-time system remains deterministic under worst-case operating conditions.
+In safety-critical avionics, software scheduling analysis provides mandatory compliance evidence throughout the certification process. A DO-178C engineering team utilizes tools such as RapiTime to measure worst-case execution times (WCETs), analyze task timing behavior, and verify that all software deadlines can be met under worst-case conditions. Engineers document task periods, priorities, measured WCETs, processor utilization, and response-time analysis (RTA) results within the project's formal verification records. During design reviews and certification audits, task priorities are carefully evaluated to ensure that safety-critical functions receive higher scheduling precedence than non-critical operations. If RTA identifies a deadline violation, the software cannot be certified until corrective actions are taken. Engineers may reduce execution time through code optimization, increase task periods, redesign task interactions, or divide large operations into smaller tasks. After modifications are implemented, the timing analysis is repeated and documented to provide objective evidence that the real-time system remains deterministic, predictable, and capable of meeting all timing requirements under worst-case operating conditions.
 
-**Citation**
+**Citations**
 
-https://www.rapitasystems.com/blog/do-178b-do-178c-and-worst-case-execution-time
+https://www.rtca.org/do-178/
+
+https://www.faa.gov/sites/faa.gov/files/aircraft/air_cert/design_approvals/air_software/05-27_RTSA.pdf
 
 - Google AI was used as well
