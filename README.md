@@ -76,3 +76,9 @@ Because RMS utilizes fixed priorities based entirely on task periods, changes in
 
 ## Part D – Industry anchor
 In safety-critical avionics, scheduling analysis provides mandatory compliance evidence. A DO-178C team uses tools like RapiTime to measure worst-case execution times (WCETs) and verify deadline adherence. Engineers archive task periods, priorities, measured WCETs, utilization, and RTA results into the project’s formal verification records. During audits, priorities are reviewed to guarantee safety-critical functions receive correct scheduling precedence. If RTA indicates a deadline violation, the failure blocks certification. Engineers resolve misses by optimizing code to reduce execution time, lengthening task periods, or splitting large operations into smaller tasks. The timing analysis is then re-run to provide objective evidence that the real-time system remains deterministic under worst-case operating conditions.
+
+**Citation**
+
+https://www.rapitasystems.com/blog/do-178b-do-178c-and-worst-case-execution-time
+
+Google AI was used as well
